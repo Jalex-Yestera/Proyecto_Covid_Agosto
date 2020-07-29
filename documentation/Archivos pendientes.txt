@@ -13,4 +13,4 @@ Archivo visualization_tb.py  con el tema plot y visualizaciones
 
 Archivo mining_data_tb.py con las funciones relativas a json y mining
 
-Archivo apis_tb.py con las funciones relativas a las apis
+Archivo apis_tb.py con las funciones relativas a las apis.
