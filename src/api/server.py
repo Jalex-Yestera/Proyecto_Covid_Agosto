@@ -1,4 +1,4 @@
-# contains the functionality that starts the Flask Api
+# contains the functionality that starts the Flask Api @Jalex-Yestera
 '''There are two GET functions:
     i. One that must allow to receive an group_id and will return a json with
     one attribute called “token” with the S value (explained below). This
