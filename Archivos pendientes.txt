@@ -1,6 +1,16 @@
 en carpeta src :
-main.ipynb
-contains all the functionality.
-This file must only contain imports, pandas, matplotlib, requests,... and calls to your src/utils/*
-modules.
 
+Archivo main.ipynb (solo "imports", requests y llamadas a modulos)
+	*** Habrá que incluir
+		import folders_tb
+		import visualization_tb
+		import mining_data_tb
+		import apis_tb.py
+
+Archivo  folders_tb.py con todas las funciones de abrir, crear y escribir archivos
+
+Archivo visualization_tb.py  con el tema plot y visualizaciones
+
+Archivo mining_data_tb.py con las funciones relativas a json y mining
+
+Archivo apis_tb.py con las funciones relativas a las apis
