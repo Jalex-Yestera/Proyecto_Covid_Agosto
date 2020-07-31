@@ -10,12 +10,8 @@ app = Flask(__name__)  # init
 @app.route("/")  # Default path
 def default():
     # Redirect
-    return '''<h1> Api del grupo B</h1> <p> Añadir get_token?id= para conseguir el token</p>'''
+    return '''<h1> Api del grupo B</h1> <p> Añadir get_token?id= para conseguir el token, get_json?id= para el json</p>'''
 
-@app.route("/give_me_id", methods =['GET'])
-def give_id(): 
-    x= request.args['id']
-    return x
 @app.route("/get_token", methods = ['GET'])
 def get_token():
     clave = None
@@ -26,6 +22,7 @@ def get_token():
         return yeison['token']
     else:
         return "Error al introducir la clave. Prueba con B145"
+
 @app.route("/get_json", methods = ['GET'])
 def get_json():
     token = None
