@@ -9,4 +9,7 @@ def graf_a (graf):
     return plt.show()
 
 
-graf_a(graf="grupoa.json")
+graf_a(graf="grupoa")
+
+
+
