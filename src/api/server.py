@@ -27,7 +27,7 @@ def get_token():
 def get_json():
     token = None
     # Get the settings fullpath
-    settings_file = os.path.dirname(__file__) + "\\d_averages.json"
+    settings_file = os.path.dirname(__file__) + "\\..\\..\\resources\\json\\output\\d_averages.json"
     # Load json from file 
     with open(settings_file, "r") as json_file_readed:
         jason = json.load(json_file_readed)
@@ -48,7 +48,7 @@ def main():
     print(os.path.dirname(__file__))
     
     # Get the settings fullpath
-    settings_file = os.path.dirname(__file__) + "\\settings.json"
+    settings_file = os.path.dirname(__file__) + "\\..\\..\\resources\\json\\input\\settings.json"
     # Load json from file 
     with open(settings_file, "r") as json_file_readed:
         json_readed = json.load(json_file_readed)
