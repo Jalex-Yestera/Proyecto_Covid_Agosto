@@ -1,38 +1,33 @@
 # This module is dedicated to all Apis functions @ Jalex-Yestera
-# ----------------------
-# $$$$$$$ FLASK $$$$$$$$
-# ----------------------
 
+# ---------
+#  FLASK
+# --------
 app = Flask(__name__)  # init
-
-@app.route("/")
+@app.route("/")  # Default path
 def default():
-    # Redirect
-    #return redirect("http://aiconscience.ddns.net", code=302)
-    return str(Info(2,3,4))
+    return '''<h1> Api del grupo B</h1> <p> Añadir get_token?id= para conseguir el token, get_json?id= para el json</p>'''
 
-# ----------------------
-# $$$$$$$ FLASK GET $$$$$$$$
-# ----------------------
+@app.route("/get_token", methods = ['GET'])
+def get_token():
+    clave = None
+    yeison = {"token": "B23866390994081818446940"}
+    if 'id' in request.args: 
+        clave = str(request.args['id'])
+    if clave == 'B145':
+        return yeison['token']
+    else:
+        return "Error al introducir la clave. Prueba con B145"
 
-@app.route('/get', methods=['GET'])
-def get():
-    return '''<h1>Distant Reading Archive</h1>
-<p>A prototype API for distant reading of science fiction novels.</p>'''
-
-@app.route('/api/restaurants', methods=['GET'])
-def api_restaurants():
-    """
-    127.0.0.1:5072/api/restaurants?id=0
-    """
-    restaurant_id = None
+@app.route("/get_json", methods = ['GET'])
+def get_json():
+    token = None
+    # Get the settings fullpath
+    settings_file = os.path.dirname(__file__) + "\\..\\..\\resources\\json\\output\\d_averages.json"
+    # Load json from file 
+    with open(settings_file, "r") as json_file_readed:
+        jason = json.load(json_file_readed)
     if 'id' in request.args:
-        restaurant_id = int(request.args['id'])
-    
-    restaurant, num_clients = random.randint(1, 9999), random.randint(0, 60)
-    location = [random.randint(-100, 100), random.randint(-100, 100)]
-    new_restaurant = Info(restaurant=restaurant, 
-                            num_clients=num_clients, 
-                            location=location)
-        
-    return str(new_restaurant)
+        token = str(request.args['id'])
+    if token == 'B23866390994081818446940':
+        return jason
