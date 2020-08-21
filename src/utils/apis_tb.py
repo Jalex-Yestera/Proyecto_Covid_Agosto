@@ -1,5 +1,5 @@
 # This module is dedicated to all Apis functions @ Jalex-Yestera
-
+from flask import Flask
 # ---------
 #  FLASK
 # --------

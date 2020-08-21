@@ -1,0 +1,12 @@
+Countries population research (2020/08/14):
+Data source: https://www.worldometers.info/world-population/population-by-country/
+SPAIN 
+46.754.778
+FRANCE
+65.273.511
+INDIA
+1.380.004.385
+PERÚ
+32.971.854
+USA
+331.002.651
