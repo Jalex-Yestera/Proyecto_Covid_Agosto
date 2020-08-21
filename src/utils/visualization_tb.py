@@ -1,5 +1,4 @@
 # This module is dedicated to all plot functions
-
 # Éste módulo contiene la función que hace el gráfico del json del equipo A @CristiDatas
 # graf
 def graf_a(graf):
